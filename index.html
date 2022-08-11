@@ -1,40 +1,559 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+   <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+   <link rel="stylesheet" href="dist/reset.css">
+   <link rel="stylesheet" href="dist/reveal.css">
+   <link rel="stylesheet" href="dist/theme/black.css">
+   <link rel="stylesheet" href="css/castom.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+   <!-- Theme used for syntax highlighted code -->
+   <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+   <div class="reveal">
+      <div class="slides">
+         <section><h3>Presentation module CSS Grid</h3></section>
+         <section>
+            <section><h3>What is a module grid?</h3></section>
+         </section>
+         <section>
+            <section><h3>How to apply the module?</h3></section>
+            <section>
+               <h4>Basic Structure html code</h4>
+               <pre class="block-code">
+                     &ltdiv class="grid-container">
+                        &ltdiv class="grid-item item-1">1&lt/div&gt
+                        &ltdiv class="grid-item item-2">2&lt/div&gt
+                        &ltdiv class="grid-item item-3">3&lt/div&gt
+                        &ltdiv class="grid-item item-4">4&lt/div&gt
+                        &ltdiv class="grid-item item-5">5&lt/div&gt
+                        &ltdiv class="grid-item item-6">6&lt/div&gt
+                        &ltdiv class="grid-item item-7">7&lt/div&gt
+                        &ltdiv class="grid-item item-8">8&lt/div&gt
+                        &ltdiv class="grid-item item-9">9&lt/div&gt
+                     &lt/div>
+               </pre>
+            </section>
+
+            <section>
+               <pre>
+                  .grid-container {
+                     display: grid;
+                  }
+
+                  or
+
+                  .grid-container {
+                     display: inline-grid;
+                  }
+
+               </pre>
+            </section>
+
+            <section class="slide-basic-structure-html-display-grid">
+
+               <pre>
+                  .grid-container {
+                     display: grid
+                  }
+               </pre>
+               <span class="span-element">I'm inline element!</span>
+               <div class="grid-container">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+            <section class="slide-basic-structure-html-display-inline-grid">
+               <pre>
+                  .grid-container {
+                     display: inline-grid
+                  }
+               </pre>
+               <span class="span-element">I'm inline element!</span>
+               <div class="grid-container">
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+         </section>
+         <section>
+            <section><h3>grid structure</h3></section>
+            <section class="grid-structure-column">
+               <div class="grid-container">
+                  <div class="grid-item-column">Column 1</div>
+                  <div class="grid-item-column">Column 2</div>
+                  <div class="grid-item-column">Column 3</div>
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+            
+            <section class="grid-structure-row">
+               <div class="grid-container">
+                  <div class="grid-item-row">Row 1</div>
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+                  <div class="grid-item-row">Row 2</div>
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+                  <div class="grid-item-row">Row 3</div>
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+
+            <section class="grid-structure-gap">
+               <pre>
+                  .grid-item {
+                     gap:15px;
+                  }
+               </pre>
+               <div class="grid-container">
+
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+
+            <section class="grid-structure-row-gap">
+               <pre>
+                  .grid-item {
+                     row-gap:15px;
+                  }
+               </pre>
+               <div class="grid-container">
+
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+
+            <section class="grid-structure-column-gap">
+               <pre>
+                  .grid-item {
+                     column-gap:15px;
+                  }
+               </pre>
+               <div class="grid-container">
+
+                  <div class="grid-item">1</div>
+                  <div class="grid-item">2</div>
+                  <div class="grid-item">3</div>
+
+                  <div class="grid-item">4</div>
+                  <div class="grid-item">5</div>
+                  <div class="grid-item">6</div>
+
+                  <div class="grid-item">7</div>
+                  <div class="grid-item">8</div>
+                  <div class="grid-item">9</div>
+               </div>
+            </section>
+
+            <section class="picture-lines"><img src="./assets/grid_lines.png" alt=""></section>
+         </section>
+         <section>
+            <section><h3>How to create lines and columns?</h3></section>
+            <section class="termins">
+
+              <p><span>grid-template-columns</span>  - defines line names and grid column sizes</p>
+              <p>/* grid-template-columns: 100px 100px 100px; */</p> 
+              <p>Will create three columns for 100px</p>
+            </section>
+            <section class="termins">
+               <p><span>grid-template-rows</span> - defines the line names and stripe sizes of the grid rows</p> 
+              <p>/* grid-template-rows: 20% 20% auto; */</p> 
+              <p>Will create two rows by 20% from parent size and one row for the rest of the width</p>
+            </section>
+            <section class="grid-managing-template">
+               <pre>
+                  .grid-container {
+                     display: grid;
+                     grid-template-columns:auto 30% 3rem ;
+                     grid-template-rows: 25vh auto 100px;
+                     gap: 10px;
+                  }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+                  <div class="grid-item item-8">8</div>
+                  <div class="grid-item item-8">9</div>
+               </div>
+            </section>
+            <section class="grid-managing-template-fr">
+               <pre>
+                  .grid-container {
+                     display: grid;
+                     grid-template-columns: 2fr 1fr 1fr;
+                     /* Similar to entries 50% 25% 25% */
+                     gap: 10px;
+                  }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+                  <div class="grid-item item-8">8</div>
+                  <div class="grid-item item-8">9</div>
+               </div>
+            </section>
+
+
+            <section class="grid-managing-repeat">
+               <h4>Repeat()</h4>
+               <pre>
+                  .grid-container{
+                     display: grid;
+                     grid-template-columns: repeat(3,1fr);
+                     /* Similar to entries grid-template-columns: 1fr 1fr 1fr; */
+                     gap: 10px;
+                  }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+                  <div class="grid-item item-8">8</div>
+                  <div class="grid-item item-8">9</div>
+
+               </div>
+            </section>
+            <section class="grid-managing-repeat">
+               <h4>Combination of conventional recording and repeat() </h4>
+               <pre>
+                  .grid-container{
+                     display: grid;
+                     grid-template-columns: 1fr repeat(2,1fr);
+                     /* Similar to entries grid-template-columns: 1fr 1fr 1fr; */
+                     gap: 10px;
+                  }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+                  <div class="grid-item item-8">8</div>
+                  <div class="grid-item item-8">9</div>
+
+               </div>
+            </section>
+
+            
+            <section class="grid-managing-row">
+               <pre>
+                  .item-4{
+                     grid-column-start: 1;
+                     grid-column-end: 3;
+                   }
+
+                   .item-3{
+                     grid-column-start: 3;
+                     grid-column-end: 4;
+                     grid-row-start: 1;
+                     grid-row-end: 3;
+                   }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+               </div>
+            </section>
+         </section>
+         <section>
+            <section><h3>Alignment of elements</h3></section>
+            <section class="grid-managing-start">
+               <pre>
+                  .grid-container {
+                     display: grid;
+                     background-color: rgba(129, 129, 129, 0.321);
+                     grid-template-columns:repeat(3, 200px);
+                     grid-template-rows:repeat(3, 55px);
+                     height: 400px;
+                     gap: 10px;
+                  }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+                  <div class="grid-item item-8">8</div>
+                  <div class="grid-item item-8">9</div>
+               </div>
+            </section>
+
+            <section>
+               <h4>justify-content</h4>
+               <p>This property allows us to align elements with respect to the main axis.</p>
+            </br>
+            <p>Has such values as</p>
+               <ul>
+                  <li>start</li>
+                  <li>center</li>
+                  <li>end</li>
+                  <li>space-between</li>
+                  <li>space-around</li>
+                  <li>space-evenly</li>
+               </ul>
+            </section>
+
+            <section class="grid-managing-start">
+             <p>justify-content: start</p>
+               <pre>
+                  .grid-container {
+                     display: grid;
+                     background-color: rgba(129, 129, 129, 0.321);
+                     grid-template-columns:repeat(3, 200px);
+                     grid-template-rows:repeat(3, 55px);
+
+                     gap: 10px;
+
+                     justify-content: start;
+                  }
+               </pre>
+               <div class="grid-container">
+                  <div class="grid-item item-1">1</div>
+                  <div class="grid-item item-2">2</div>
+                  <div class="grid-item item-3">3</div>
+                  <div class="grid-item item-4">4</div>
+                  <div class="grid-item item-5">5</div>
+                  <div class="grid-item item-6">6</div>
+                  <div class="grid-item item-7">7</div>
+                  <div class="grid-item item-8">8</div>
+                  <div class="grid-item item-8">9</div>
+               </div>
+            </section>
+
+            <section class="grid-managing-center">
+               <p>justify-content: center</p>
+                 <pre>
+                    .grid-container {
+                       display: grid;
+                       background-color: rgba(129, 129, 129, 0.321);
+                       grid-template-columns:repeat(3, 200px);
+                       grid-template-rows:repeat(3, 55px);
+
+                       gap: 10px;
+  
+                       justify-content: center;
+                    }
+                 </pre>
+                 <div class="grid-container">
+                    <div class="grid-item item-1">1</div>
+                    <div class="grid-item item-2">2</div>
+                    <div class="grid-item item-3">3</div>
+                    <div class="grid-item item-4">4</div>
+                    <div class="grid-item item-5">5</div>
+                    <div class="grid-item item-6">6</div>
+                    <div class="grid-item item-7">7</div>
+                    <div class="grid-item item-8">8</div>
+                    <div class="grid-item item-8">9</div>
+                 </div>
+              </section>
+
+              <section class="grid-managing-end">
+               <p>justify-content: end</p>
+                 <pre>
+                    .grid-container {
+                       display: grid;
+                       background-color: rgba(129, 129, 129, 0.321);
+                       grid-template-columns:repeat(3, 200px);
+                       grid-template-rows:repeat(3, 55px);
+                       gap: 10px;
+  
+                       justify-content: end;
+                    }
+                 </pre>
+                 <div class="grid-container">
+                    <div class="grid-item item-1">1</div>
+                    <div class="grid-item item-2">2</div>
+                    <div class="grid-item item-3">3</div>
+                    <div class="grid-item item-4">4</div>
+                    <div class="grid-item item-5">5</div>
+                    <div class="grid-item item-6">6</div>
+                    <div class="grid-item item-7">7</div>
+                    <div class="grid-item item-8">8</div>
+                    <div class="grid-item item-8">9</div>
+                 </div>
+              </section>
+
+              <section class="grid-managing-space-between">
+               <p>justify-content: space-between</p>
+                 <pre>
+                    .grid-container {
+                       display: grid;
+                       background-color: rgba(129, 129, 129, 0.321);
+                       grid-template-columns:repeat(3, 200px);
+                       grid-template-rows:repeat(3, 55px);
+                       height: 400px;
+                       gap: 10px;
+  
+                       justify-content: space-between;
+                    }
+                 </pre>
+                 <div class="grid-container">
+                    <div class="grid-item item-1">1</div>
+                    <div class="grid-item item-2">2</div>
+                    <div class="grid-item item-3">3</div>
+                    <div class="grid-item item-4">4</div>
+                    <div class="grid-item item-5">5</div>
+                    <div class="grid-item item-6">6</div>
+                    <div class="grid-item item-7">7</div>
+                    <div class="grid-item item-8">8</div>
+                    <div class="grid-item item-8">9</div>
+                 </div>
+              </section>
+
+              <section class="grid-managing-space-around">
+               <p>justify-content: space-around</p>
+                 <pre>
+                    .grid-container {
+                       display: grid;
+                       background-color: rgba(129, 129, 129, 0.321);
+                       grid-template-columns:repeat(3, 200px);
+                       grid-template-rows:repeat(3, 55px);
+                       gap: 10px;
+  
+                       justify-content: space-around;
+                    }
+                 </pre>
+                 <div class="grid-container">
+                    <div class="grid-item item-1">1</div>
+                    <div class="grid-item item-2">2</div>
+                    <div class="grid-item item-3">3</div>
+                    <div class="grid-item item-4">4</div>
+                    <div class="grid-item item-5">5</div>
+                    <div class="grid-item item-6">6</div>
+                    <div class="grid-item item-7">7</div>
+                    <div class="grid-item item-8">8</div>
+                    <div class="grid-item item-8">9</div>
+                 </div>
+              </section>
+
+              
+              <section class="grid-managing-space-evenly">
+               <p>justify-content: space-evenly</p>
+                 <pre>
+                    .grid-container {
+                       display: grid;
+                       background-color: rgba(129, 129, 129, 0.321);
+                       grid-template-columns:repeat(3, 200px);
+                       grid-template-rows:repeat(3, 55px);
+                       gap: 10px;
+  
+                       justify-content: space-evenly;
+                    }
+                 </pre>
+                 <div class="grid-container">
+                    <div class="grid-item item-1">1</div>
+                    <div class="grid-item item-2">2</div>
+                    <div class="grid-item item-3">3</div>
+                    <div class="grid-item item-4">4</div>
+                    <div class="grid-item item-5">5</div>
+                    <div class="grid-item item-6">6</div>
+                    <div class="grid-item item-7">7</div>
+                    <div class="grid-item item-8">8</div>
+                    <div class="grid-item item-8">9</div>
+                 </div>
+              </section>
+         </section>
+
+         <section><h3>Goodbye</h3></section>
+      </div>
+
+   </div>
+
+
+   <script src="dist/reveal.js"></script>
+   <script src="plugin/notes/notes.js"></script>
+   <script src="plugin/markdown/markdown.js"></script>
+   <script src="plugin/highlight/highlight.js"></script>
+   <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+         hash: true,
+
+         // Learn about plugins: https://revealjs.com/plugins/
+         plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+      });
+   </script>
+</body>
+
 </html>

@@ -1,0 +1,187 @@
+.span-element{
+   background-color: rgb(121, 121, 121);
+}
+.termins span{
+   font-weight: 800;
+   font-size: 56px;
+}
+
+.grid-item{
+   padding: 5px;
+   background-color: rgb(121, 121, 121);
+}
+
+.slide-basic-structure-html-display-block .grid-container{
+   display: block;
+   grid-template-columns: auto auto auto;
+}
+
+.slide-basic-structure-html-display-grid .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto;
+}
+
+.slide-basic-structure-html-display-inline-grid .grid-container{
+   display: inline-grid;
+   grid-template-columns: auto auto auto;
+}
+
+
+
+.grid-structure-column .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto; 
+}
+
+.grid-structure-column .grid-item{
+   border-left: 2px solid rgba(54, 207, 231, 0.623);
+   border-right: 2px solid rgba(54, 207, 231, 0.623);
+}
+.grid-structure-column .grid-item-column{
+   border-left: 2px solid rgba(54, 207, 231, 0.623);
+   border-right: 2px solid rgba(54, 207, 231, 0.623);
+}
+
+.grid-structure-row .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto auto; 
+}
+
+.grid-structure-row .grid-item{
+   border-top: 2px solid rgba(54, 207, 231, 0.623);
+   border-bottom: 2px solid rgba(54, 207, 231, 0.623);
+   
+}
+.grid-structure-row .grid-item-row{
+   border-top: 2px solid rgba(54, 207, 231, 0.623);
+   border-bottom: 2px solid rgba(54, 207, 231, 0.623);
+}
+
+.grid-structure-gap .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto; 
+   gap: 15px;
+}
+
+
+.grid-structure-row-gap .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto; 
+   row-gap: 15px;
+}
+.grid-structure-column-gap .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto; 
+   column-gap: 15px;
+}
+
+
+.picture-lines{
+   background-color: #fff;
+}
+
+.grid-managing-row .grid-container{
+   display: grid;
+   grid-template-columns: auto auto auto;
+   gap: 10px;
+}
+
+
+.grid-managing-row .grid-container .item-4{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-managing-row .grid-container .item-3{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 3;
+ }
+
+
+
+.grid-managing-template .grid-container{
+   display: grid;
+   grid-template-columns:auto 30% 3rem ;
+   grid-template-rows: 25vh auto 100px;
+   gap: 10px;
+}
+
+.grid-managing-template-fr .grid-container{
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   gap: 10px;
+}
+
+
+
+.grid-managing-repeat .grid-container{
+   display: grid;
+   grid-template-columns:repeat(3, 1fr);
+   gap: 10px;
+}
+
+
+.grid-managing-start .grid-container{
+   display: grid;
+   background-color: rgba(129, 129, 129, 0.321);
+   grid-template-columns:repeat(3, 200px);
+   grid-template-rows:repeat(3, 55px);
+
+   gap: 10px;
+   justify-content: start;
+}
+
+.grid-managing-center .grid-container{
+   display: grid;
+   background-color: rgba(129, 129, 129, 0.321);
+   grid-template-columns:repeat(3, 200px);
+   grid-template-rows:repeat(3, 55px);
+
+   gap: 10px;
+   justify-content: center;
+}
+
+.grid-managing-end .grid-container{
+   display: grid;
+   background-color: rgba(129, 129, 129, 0.321);
+   grid-template-columns:repeat(3, 200px);
+   grid-template-rows:repeat(3, 55px);
+
+   gap: 10px;
+   justify-content: end;
+}
+
+.grid-managing-space-between .grid-container{
+   display: grid;
+   background-color: rgba(129, 129, 129, 0.321);
+   grid-template-columns:repeat(3, 200px);
+   grid-template-rows:repeat(3, 55px);
+
+   gap: 10px;
+   justify-content: space-between;
+}
+
+.grid-managing-space-around .grid-container{
+   display: grid;
+   background-color: rgba(129, 129, 129, 0.321);
+   grid-template-columns:repeat(3, 200px);
+   grid-template-rows:repeat(3, 55px);
+
+   gap: 10px;
+   justify-content: space-around;
+}
+
+.grid-managing-space-evenly .grid-container{
+   display: grid;
+   background-color: rgba(129, 129, 129, 0.321);
+   grid-template-columns:repeat(3, 200px);
+   grid-template-rows:repeat(3, 55px);
+   gap: 10px;
+justify-content:space-evenly;
+}
+
